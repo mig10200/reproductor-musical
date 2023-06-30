@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>RetroMusi</title>
+</head>
+<body>
+  <header>
+    <h1>RetroMusi</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Canciones</a></li>
+        <li><a href="#">Genero</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="player">
+      <div id="cover-art"></div>
+      <div id="song-info"></div>
+      <audio id="audio-player" src="/music/Photograph.mp3"></audio>
+      <audio id="audio-player" src="/music/Starboy.mp3"></audio>
+      <audio id="audio-player" src="/music/Stressed-Out.mp3"></audio>
+      <audio id="audio-player" src="/music/Con-Calma.mp3"></audio>
+      <audio id="audio-player" src="/music/BYOB.mp3"></audio>
+      <audio id="audio-player" src="/music/Come-and-Get-Your-Love.mp3"></audio>
+      <audio id="audio-player" src="/music/Callaita.mp3"></audio>
+      <audio id="audio-player" src="/music/New-Rules.mp3"></audio>
+      <div id="controls">
+        <button id="previous" onclick="previousSong()">&#8678;</button>
+        <button id="play" onclick="togglePlay()">▶</button>
+        <button id="next" onclick="nextSong()">&#8680;</button>
+      </div>
+      <div id="progress">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress-bar" min="0" max="100" value="0" onchange="seekSong()">
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <div id="song-list">
+      <ul>
+        <li onclick="loadSong('music/Photograph.mp3', 'Edd Sheeran', 'img/poster-photograph.jpg')">
+          <img src="/img/poster-photograph.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Photograph</h3>
+            <p>Edd Sheeran</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/Starboy.mp3', 'The Weekend', 'img/poster-starboy.jpg')">
+          <img src="/img/poster-starboy.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Starboy</h3>
+            <p>The Weekend</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/Stressed-Out.mp3', 'Twenty One Pilots', 'img/poster-stressed.out.jpg')">
+          <img src="/img/poster-stressed.out.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Stressed Out</h3>
+            <p>Twenty One Pilots</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/Con-Calma.mp3', 'Daddy Yanke', 'img/poster-con.calma.jpg')">
+          <img src="/img/poster-con.calma.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Con Calma</h3>
+            <p>Daddy Yanke</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/BYOB.mp3', 'System of a Down', 'img/poster-B.Y.O.B.jpg')">
+          <img src="/img/poster-B.Y.O.B.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>B.Y.O.B</h3>
+            <p>System of a Down</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/Come-and-Get-Your-Love.mp3', 'Redbone', 'img/poster-redbone.jpg')">
+          <img src="/img/poster-redbone.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Come adn Get Your Love</h3>
+            <p>Redbone</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/Callaita.mp3', 'Bad Bunny', 'img/poster-callaita.jpg')">
+          <img src="/img/poster-callaita.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>Callaita</h3>
+            <p>Bad Bunny</p>
+          </div>
+        </li>
+        <li onclick="loadSong('music/New-Rules.mp3', 'Dua Lipa', 'img/poster-new.rules.jpg')">
+          <img src="/img/poster-new.rules.jpg" alt="Portada">
+          <div class="song-info">
+            <h3>New Rules</h3>
+            <p>Dua Lipa</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
